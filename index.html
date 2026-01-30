@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile Cá Nhân</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            margin:0;
+            padding:0;
+            background:#f2f4f7;
+            font-family:"Segoe UI", Tahoma, Arial, sans-serif;
+            color:#333;
+        }
+        .container{
+            max-width:1000px;
+            margin:40px auto;
+            background:#fff;
+            border-radius:14px;
+            box-shadow:0 10px 25px rgba(0,0,0,0.1);
+            overflow:hidden;
+        }
+
+        /* ===== HEADER + PROFILE ===== */
+        .header{
+            padding:35px 30px;
+            background:#eef2f6;
+            display:flex;
+            align-items:center;
+            gap:30px;
+        }
+        .avatar-frame{
+            width:160px;
+            height:160px;
+            padding:6px;
+            border-radius:50%;
+            background:linear-gradient(135deg,#4facfe,#00f2fe);
+            box-shadow:0 8px 18px rgba(0,0,0,0.15);
+            flex-shrink:0;
+        }
+        .avatar-frame img{
+            width:100%;
+            height:100%;
+            object-fit:cover;
+            border-radius:50%;
+            background:#fff;
+        }
+        .header-info{
+            flex:1;
+        }
+        .header-info h1{
+            margin:0;
+            font-size:30px;
+            color:#2c3e50;
+        }
+        .header-info .role{
+            font-size:15px;
+            color:#555;
+            margin:4px 0 10px;
+        }
+        .contact{
+            font-size:14px;
+            line-height:1.6;
+            color:#444;
+        }
+        .contact a{
+            color:#2c7be5;
+            text-decoration:none;
+        }
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+        }
+        td{
+            vertical-align:top;
+            padding:25px;
+        }
+        .left{
+            width:35%;
+            background:#fafbfd;
+            border-right:1px solid #e0e0e0;
+        }
+        .right{
+            width:65%;
+        }
+
+        .section{
+            margin-bottom:30px;
+            padding:15px;
+            border-radius:10px;
+            transition:all 0.3s ease;
+            position:relative;
+            overflow:hidden;
+        }
+
+        .section::before{
+            content:"";
+            position:absolute;
+            top:0;
+            left:-100%;
+            width:100%;
+            height:100%;
+            background:linear-gradient(120deg, transparent, rgba(79,172,254,0.25), transparent);
+            transition:all 0.6s ease;
+        }
+        .section:hover::before{
+            left:100%;
+        }
+        .section:hover{
+            background:#f0f5ff;
+            transform:translateX(6px);
+            box-shadow:0 6px 16px rgba(0,0,0,0.08);
+        }
+
+        .title{
+            font-size:18px;
+            font-weight:600;
+            margin-bottom:10px;
+            color:#34495e;
+        }
+        ul{
+            margin:8px 0 0 18px;
+        }
+        ul li{
+            margin-bottom:6px;
+        }
+        .info{
+            line-height:1.6;
+        }
+
+        @media(max-width:768px){
+            .header{flex-direction:column;text-align:center;}
+            td{display:block;width:100%;}
+            .left{border-right:none;border-bottom:1px solid #e0e0e0;}
+        }
+
+        /* ===== HIỆU ỨNG THEO CON TRỎ ===== */
+        .section .cursor-wave{
+            position:absolute;
+            width:120px;
+            height:120px;
+            background:radial-gradient(circle, rgba(79,172,254,0.35) 0%, rgba(79,172,254,0.15) 40%, transparent 70%);
+            border-radius:50%;
+            pointer-events:none;
+            transform:translate(-50%, -50%) scale(0);
+            animation:wave 0.45s ease-out forwards;
+        }
+        @keyframes wave{
+            to{
+                transform:translate(-50%, -50%) scale(1.2);
+                opacity:0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <div class="avatar-frame">
+            <img src="D:/2/profile.jpg" alt="Ảnh cá nhân">
+        </div>
+        <div class="header-info">
+            <h1>Trương Anh Tuấn</h1>
+            <div class="role">Sinh viên Công nghệ Thông tin</div>
+            <div class="contact">
+                📱 0896 441 799<br>
+                📍 Mỹ Khánh, Phong Điền, Cần Thơ<br>
+                📧 <a href="mailto:truonganhtuank4@gmail.com">truonganhtuank4@gmail.com</a><br>
+                💻 <a href="https://github.com/TruongAnhTuan220616" target="_blank">
+                    github.com/TruongAnhTuan220616</a>
+            </div>
+        </div>
+    </div>
+
+    <table>
+        <tr>
+            <td class="left">
+                <div class="section">
+                    <div class="title">Mục tiêu nghề nghiệp</div>
+                    <div class="info">
+                        Là sinh viên mới tốt nghiệp, em mong muốn được làm việc trong môi trường doanh nghiệp
+                        chuyên nghiệp để học hỏi, tích lũy kinh nghiệm thực tế và phát triển kỹ năng chuyên môn.
+                        <br><br>
+                        Trong 2 năm tới, em hướng đến việc làm tốt các nhiệm vụ được giao và không ngừng hoàn thiện
+                        bản thân. Về lâu dài, em mong muốn gắn bó ổn định và đóng góp tích cực cho công ty.
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="title">Sở thích</div>
+                    <ul>
+                        <li>Tìm hiểu và học hỏi kiến thức mới</li>
+                        <li>Đọc sách, học tiếng Anh</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <div class="title">Kỹ năng</div>
+                    <div class="info">
+                        Tư duy logic và khả năng phân tích vấn đề tốt.
+                        Có khả năng tiếp thu nhanh kiến thức và công nghệ mới.
+                    </div>
+                </div>
+            </td>
+
+            <td class="right">
+                <div class="section">
+                    <div class="title">Trình độ học vấn</div>
+                    <div class="info">
+                        Kỹ sư Công nghệ Thông tin<br>
+                        Trường Đại học Nam Cần Thơ<br>
+                        Dự kiến tốt nghiệp: 2026
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="title">Kinh nghiệm liên quan</div>
+                    <div class="info">
+                        Tham gia học tập và thực hiện các dự án học thuật dưới sự hướng dẫn của giảng viên.
+                        Giúp hiểu rõ hơn quy trình làm việc và nâng cao tinh thần trách nhiệm.
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="title">Kiến thức & Công nghệ</div>
+                    <strong>Ngôn ngữ lập trình:</strong>
+                    <ul>
+                        <li>C++</li>
+                        <li>C#</li>
+                        <li>Java / JavaScript</li>
+                        <li>Python</li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<script>
+    document.querySelectorAll('.section').forEach(section => {
+        section.addEventListener('mousemove', e => {
+            const wave = document.createElement('span');
+            wave.classList.add('cursor-wave');
+
+            const rect = section.getBoundingClientRect();
+            wave.style.left = (e.clientX - rect.left) + 'px';
+            wave.style.top  = (e.clientY - rect.top)  + 'px';
+
+            section.appendChild(wave);
+            setTimeout(() => wave.remove(), 450);
+        });
+    });
+</script>
+
+</body>
+</html>
